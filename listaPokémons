@@ -1,0 +1,35 @@
+fun main() {
+    val listaPokemon : Array<String> = arrayOf(
+        "Pikachu",
+        "Squirtle",
+        "Charmander",
+        "Bulbassauro",
+        "Psyduck",
+        "Machop",
+        "Wooper",
+        "Deino",
+        "Ampharos",
+        "Dialga",
+        "Gengar",
+        "Metapod"
+    )
+    
+    println("Quantidade de pokémons na pokedéx: " + listaPokemon.size)
+    
+    println("intervalo da lista:" + listaPokemon.indices)
+    
+    for(x in 0..(listaPokemon.size-1)) {
+        print(" ${listaPokemon[x]} /")
+  }
+    
+    print("\n")
+    
+    for(y in listaPokemon.indices) {
+    print(" ${listaPokemon[y]} /")
+  }
+
+    print("\n")
+    
+    listaPokemon.forEach{ print(" $it /") }
+
+}
