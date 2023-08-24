@@ -1,0 +1,38 @@
+var numero = 0
+
+fun main() {
+    println(numero)
+    println( somaCincoEMultiplica(5) )
+    println(numero)
+    somaDez()
+    println(numero)
+    
+    bhaskara(2.0, 5.0, 2.0)
+    println("\n")
+}
+
+fun somaCincoEMultiplica(valor : Int) : Int {
+    numero+=5
+    val result = (valor * numero)
+    return result
+}
+
+fun somaDez(){
+    numero+=10
+}
+
+fun bhaskara(
+             a : Double, 
+             b : Double, 
+             c : Double
+) {
+    val delta = (b * b) - (4 * a * c)
+    
+    val x1 = (-b + Math.sqrt(delta)) / 2 * a
+    val x2 = (-b - Math.sqrt(delta)) / 2 * a
+    
+    println("delta = $delta")
+    println("x' = $x1")
+    println("x'' = $x2")
+    
+}
