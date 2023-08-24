@@ -1,0 +1,53 @@
+data class DragonBall(
+    
+    var nome : String,
+    var ki : Int,
+    var raca : String
+)
+
+var listaDB : MutableList<DragonBall> = mutableListOf()
+
+fun registrar(
+             nome : String,
+             ki : Int,
+             raca : String
+) {
+    val newDB = DragonBall(nome, ki, raca)
+    
+    listaDB.add(newDB)
+    println("Registrado com sucesso!")
+}
+
+fun listar(){
+    println("🎈Lista de Personagens🎈")
+    listaDB.forEach{
+        println( "Nome: ${it.nome} \t KI: ${it.ki} \t Raça: ${it.raca}" )
+    }
+    
+}
+
+fun main() {
+    registrar(
+        nome = "Goku",
+        ki = 8000,
+        raca = "Sayajin"
+    )
+    registrar(
+        nome = "Piccolo",
+        ki = 2000,
+        raca = "Namekuseijin"
+    )
+    registrar(
+        nome = "Freeza",
+        ki = 10000,
+        raca = "Arcosiano"
+    )
+    registrar(
+        nome = "Sr. Kaio",
+        ki = 100000,
+        raca = "Deus"
+    )
+    
+    listar()
+
+}
